@@ -1,4 +1,4 @@
-//1
+//1 -- run on host 
 
 docker run -p 8080:8080 \
   -v /var/run/docker.sock:/var/run/docker.sock \
@@ -6,12 +6,12 @@ docker run -p 8080:8080 \
   jenkins/jenkins:lts
   
   
-  //2
+  //2 -- run on host 
   
   docker exec -it -u root jenkins bash
   
   
-  //3
+  //3 -- run inside the Jenkins container
   
   apt-get update && \
 apt-get -y install apt-transport-https \
