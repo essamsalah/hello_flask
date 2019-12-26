@@ -26,3 +26,9 @@ add-apt-repository \
    stable" && \
 apt-get update && \
 apt-get -y install docker-ce
+
+
+
+/* Option 2 - mount docker executable */
+
+docker run -it -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker ubuntu:latest bash
